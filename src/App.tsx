@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import Image from "./components/ui/Image";
 import Details from "./components/ui/Details";
 import Cost from "./components/ui/Cost";
-import Card from "./components/ui/Card";
+import Card from "./components/Card";
 
 function App() {
 
