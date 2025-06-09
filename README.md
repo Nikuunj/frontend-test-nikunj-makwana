@@ -4,6 +4,9 @@
 
 This project is a responsive frontend application built with React and Vite. It demonstrates dynamic UI components, card selection behavior, API data fetching, and responsive design tailored for both desktop and mobile experiences.
 
+<img src='![Screenshot 2025-06-10 020555](https://github.com/user-attachments/assets/78b6cbbf-2e4e-40d2-a578-edae101a41c7)
+' alt='img'>
+
 ## 🚀 Features
 
 * ✅ Responsive card layout and UI design
