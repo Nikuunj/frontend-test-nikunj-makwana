@@ -8,6 +8,7 @@ import QuestionMark from "../icons/QuestionMark";
 function Image({ size, allowRoad, heavyWaste }: { size: number, allowRoad: boolean, heavyWaste: boolean }) {
 
     const [hover, setHove] = useState<boolean>(false);
+    const [time, setTime] = useState<NodeJS.Timeout>();
 
     const imageUrl = {
         '4': 'https://yozbrydxdlcxghkphhtq.supabase.co/storage/v1/object/public/skips/skip-sizes/4-yarder-skip.jpg',
@@ -24,14 +25,17 @@ function Image({ size, allowRoad, heavyWaste }: { size: number, allowRoad: boole
 
     function handlHoverClick() {
         setHove(pre => !pre);
-        setTimeout(() => {
+        clearTimeout(time);
+        const res =  setTimeout(() => {
             setHove(false);
         }, 2000)
+        setTime(res);
     }
     return (
         <div className={`bg-gray-700 rounded-lg w-64 sm:w-80 xl:w-96 transition-all duration-300 relative `}>
-            <div>
+            <div onClick={handlHoverClick}>
                 <div>
+                    {/* @ts-ignore */}
                     <img src={imageUrl[size]} className={`rounded-lg h-40 sm:h-48 xl:h-60 w-full`} alt="No preview" />
                 </div>
                 <div className={`${hover? 'z-20' : '-z-20' } rounded-lg bg-gray-700/60 transition-all duration-150 h-40 sm:h-48 xl:h-60 w-full items-center justify-center flex flex-col gap-2 absolute bottom-0`}>
@@ -58,7 +62,7 @@ function Image({ size, allowRoad, heavyWaste }: { size: number, allowRoad: boole
                     <Click/>
                 </div>
             </div>
-            <div className={"top-0 left-0 absolute px-3 text-center py-2 rounded-full z-50"} title={`${size} Yards`}><Info/></div>
+            <div className={"top-0 left-0 absolute px-3 text-center py-2 rounded-full z-40"} title={`${size} Yards`}><Info/></div>
             <div className={"-bottom-10 right-0 absolute px-3 text-center py-2 rounded-full z-50 text-gray-600"} onClick={handlHoverClick} title={`Details - click to see more details`}><QuestionMark/></div>
         </div>
     )
