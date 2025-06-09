@@ -1,54 +1,79 @@
-# React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+# Frontend Test – Nikunj Makwana
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This project is a responsive frontend application built with React and Vite. It demonstrates dynamic UI components, card selection behavior, API data fetching, and responsive design tailored for both desktop and mobile experiences.
 
-## Expanding the ESLint configuration
+## 🚀 Features
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+* ✅ Responsive card layout and UI design
+* 📦 Data fetching and structured display
+* 🎯 Card selection functionality
+* 🔍 Detail view components for expanded information
+* 🎨 Clean styling with custom backgrounds and icons
+* ⚡ Built with **Vite** for fast performance
+* 🧼 Clean and maintainable component structure
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## 🛠️ Tech Stack
+
+* **React** – Functional components and hooks
+* **Vite** – Lightning-fast build and dev server
+* **TypeScript** – (If applicable based on project setup)
+* **Tailwind CSS** – For utility-first styling (optional based on project)
+
+## 📂 Project Structure
+
+```
+frontend-test-nikunj-makwana/
+├── public/
+├── src/
+│   ├── components/
+│   ├── pages/
+│   ├── assets/
+│   └── App.jsx
+├── index.html
+├── vite.config.js
+└── README.md
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🧪 How to Run
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### 1. Clone the Repo
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+```bash
+git clone https://github.com/Nikuunj/frontend-test-nikunj-makwana.git
+cd frontend-test-nikunj-makwana
 ```
+
+### 2. Install Dependencies
+
+```bash
+npm install
+```
+
+### 3. Run the Development Server
+
+```bash
+npm run dev
+```
+
+> Open [http://localhost:5173](http://localhost:5173) in your browser to see it live.
+
+## 📦 Build for Production
+
+```bash
+npm run build
+```
+
+## 📌 Recent Updates
+
+* Refined footer and card selection logic
+* Improved responsive image and card components
+* Removed unused dependencies and cleaned up paths
+* Fixed build issues and adjusted metadata titles
+
+## 📧 Contact
+
+Created by [Nikunj Makwana](mailto:mnikunj262@gmail.com)
+🔗 [Portfolio](https://nikunj-portfolio.vercel.app/)
+🔗 [GitHub](https://github.com/Nikuunj) | [LinkedIn](https://www.linkedin.com/in/makwana-nikunj/)
