@@ -1,9 +1,9 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import Card from "./components/ui/Card";
 import Image from "./components/ui/Image";
 import Details from "./components/ui/Details";
 import Cost from "./components/ui/Cost";
+import Card from "./components/ui/Card";
 
 function App() {
 
