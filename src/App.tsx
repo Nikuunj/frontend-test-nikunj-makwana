@@ -1,7 +1,8 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import Card from "./components/ui/card";
+import Card from "./components/ui/Card";
 import { DotBackground } from "./components/ui/DotBackgroundDemo";
+import Image from "./components/ui/Image";
 
 function App() {
 
@@ -30,9 +31,34 @@ function App() {
         return <div>Loading...</div>;
     }
     return (
-        <div className={"bg-black"}>
-            <DotBackground />
-        </div> 
+        <>
+            <div className={"bg-black fixed h-screen w-screen -z-30 overflow-hidden"}>
+                <DotBackground />
+            </div> 
+            <div className={`text-white grid justify-center items-center h-screen`}>
+                <div className="grid py-2 gap-y-7 md:gap-x-2 lg:gap-x-7  md:grid-cols-2 lg:grid-cols-3 transition-all duration-300">
+                    <Card>
+                        <Image />
+                    </Card>
+                    <Card>
+                        <Image />
+                    </Card>
+                    <Card>
+                        <Image />
+                    </Card>
+                    <Card>
+                        <Image />
+                    </Card>
+                    <Card>
+                        <Image />
+                    </Card>
+                    <Card>
+                        <Image />
+                    </Card>
+
+                </div>
+            </div>
+        </>
     )
 }
 
