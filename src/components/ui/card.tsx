@@ -1,3 +1,4 @@
+import React from "react"
 
 function Card({ children, id, colrId }: { children: React.ReactNode, id: number, colrId: number }) {
 
