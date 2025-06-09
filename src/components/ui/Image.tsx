@@ -17,7 +17,7 @@ function Image({ size }: { size: number }) {
     return (
         <div className={`bg-gray-700 rounded-lg w-64 sm:w-80 xl:w-96 transition-all duration-300 relative `}>
             <div>
-                <img src={imageUrl[size]} className={`rounded-lg`} alt="No preview" />
+                <img src={imageUrl[size]} className={`rounded-lg h-40 sm:h-48 xl:h-60 w-full`} alt="No preview" />
             </div>
             <div className={"top-0 left-0 absolute px-3 text-center py-2 rounded-full"} title={`${size} Yards`}><Info/></div>
         </div>
